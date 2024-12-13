@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Column from './components/Column';
 
+
 const App: React.FC = () => {
   // Datos de ejemplo para las tareas
   const tasksTodo = [
@@ -18,12 +19,16 @@ const App: React.FC = () => {
   ];
 
   return (
-    <div className="kanban-board">
-      <Column title="Pendiente" tasks={tasksTodo} />
-      <Column title="En Proceso" tasks={tasksInProgress} />
-      <Column title="Completado" tasks={tasksDone} />
+    <div className="app-container">
+      
+      <div className="kanban-board">
+        <Column title="Pendiente" tasks={tasksTodo} />
+        <Column title="En Proceso" tasks={tasksInProgress} />
+        <Column title="Completado" tasks={tasksDone} />
+      </div>
     </div>
   );
 };
 
 export default App;
+

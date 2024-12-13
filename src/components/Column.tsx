@@ -1,5 +1,5 @@
 import React from 'react';
-import { Task } from './Task.tsx'; // Importamos el componente de tarea
+import { Task } from './Task'; // Importamos el componente de tarea
 
 // Definimos los tipos para las propiedades del componente (en TypeScript)
 interface ColumnProps {

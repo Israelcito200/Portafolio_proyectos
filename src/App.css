@@ -1,21 +1,63 @@
+body {
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #000; /* Fondo base oscuro */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
 .kanban-board {
   display: flex;
-  gap: 20px;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: flex-start; /* Alinear al inicio vertical */
+  gap: 20px; /* Espaciado entre columnas */
   padding: 20px;
+  margin: 0 auto;
+  max-width: 100%; /* Asegurar que no se desborde */
+  box-sizing: border-box;
+  color: #222222;
+  
 }
+
 
 .column {
   width: 300px;
-  background-color: #f0f0f0;
+  background-color: #d8d8d8;
   border-radius: 8px;
   padding: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
+  box-shadow: 0 4px 6px rgba(220, 184, 184, 0.1);
+  
 }
 
 .task {
-  background-color: #fff;
+  background-color: #ea7c07;
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  transition: all 0.3s ease-in-out; /* Transición suave */
 }
+
+.task:hover {
+  border-color: #eeff00; /* Color verde en el borde */
+  box-shadow: 0 0 15px rgba(255, 0, 136, 0.945); /* Efecto de brillo */
+  transform: scale(1.02); /* Ligero aumento de tamaño */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .kanban-board {
+    flex-wrap: wrap; /* Permitir que las columnas se ajusten */
+    justify-content: center; /* Centrar columnas si se envuelven */
+  }
+}
+
+
+
+
+
+
