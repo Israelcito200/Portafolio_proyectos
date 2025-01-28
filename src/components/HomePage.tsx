@@ -48,7 +48,7 @@ const HomePage: React.FC = () => {
         </div>
         <div className="image-container">
           <img
-            src="https://via.placeholder.com/600x400"
+            src="./imgg.png"
             alt="Gestión de proyectos"
             className="homepage-image"
           />
