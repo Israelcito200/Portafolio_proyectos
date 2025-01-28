@@ -1,0 +1,81 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    position: fixed; 
+    top: 0; /* Lo coloca en el borde superior de la página */
+  left: 0;
+  
+  z-index: 1000;
+  box-sizing: border-box;
+  }
+  
+  .navbar-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-menu li {
+    display: inline;
+  }
+  
+  .navbar-menu a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
+  
+  .navbar-menu a:hover {
+    color: #02d9ff;
+  }
+  
+  .navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .btn-new-project {
+    background-color: #4bf7e0;
+    color: #000000;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .profile-img {
+    width: 40px; /* Tamaño de la imagen */
+    height: 40px;
+    border-radius: 50%; /* Hacer la imagen redonda */
+    object-fit: cover; /* Asegura que la imagen se ajuste correctamente */
+    border: 2px solid white; /* Un borde blanco alrededor de la imagen */
+  }
+  
+  .btn-new-project:hover {
+    background-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
+   animation:slidebg 5s linear infinite;
+  }
+  @keyframes slidebg {
+    to {
+      background-position:20vw;
+    }
+  }
+  
+  
