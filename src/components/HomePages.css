@@ -1,0 +1,199 @@
+/* General styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #1d3557, #457b9d);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+    color: #fff;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  @keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  /* Animaciones */
+  .animate-on-load {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  
+  .animate-on-load.loaded {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.8s ease, transform 1s ease;
+  }
+  
+  /* Estilos de la sección principal */
+  .main-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alineamos el contenido a la izquierda */
+    justify-content: center;
+    height: calc(100vh - 100px);
+    padding: 2rem;
+    text-align: left;
+    z-index: 1;
+    position: relative;
+  }
+  
+  .welcome-container {
+    max-width: 600px;
+    margin-bottom: 2rem;
+  }
+  
+  .welcome-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+  }
+  
+  .welcome-description {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    color: #b0b0b0;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  }
+  
+  .start-button {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    background: #457b9d;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+  }
+  
+  .start-button:hover {
+    background: #1d3557;
+    transform: scale(1.05);
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.7);
+    border-bottom: 1px solid #fff;
+    width: 100%;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #000000;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 1rem;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #457b9d;
+  }
+  
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #457b9d;
+    bottom: -4px;
+    left: 50%;
+    transition: width 0.3s ease, left 0.3s ease;
+  }
+  
+  .nav-links a:hover::after {
+    width: 100%;
+    left: 0;
+  }
+  
+  /* Fondo estrellado */
+  .stars, .shooting-stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  
+  .stars {
+    background: url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+    opacity: 0.4;
+    z-index: 1;
+  }
+  
+  .shooting-stars {
+    background: transparent;
+    z-index: 2;
+    animation: shootingStarAnimation 1.5s linear infinite;
+  }
+  
+  @keyframes shootingStarAnimation {
+    0% {
+      transform: translateX(-100px) translateY(0) scale(1);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+      transform: translateX(100vw) translateY(-100vh) scale(0.7);
+    }
+    100% {
+      transform: translateX(200vw) translateY(100vh) scale(1);
+      opacity: 0;
+    }
+  }
+  
+  /* Pie de página */
+  .footer {
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  footer p {
+    font-size: 1rem;
+    color: #b0b0b0;
+    margin: 0;
+  }
+  
